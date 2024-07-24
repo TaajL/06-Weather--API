@@ -34,8 +34,12 @@ const handleNewSearch = () => {
     document.querySelector("#city").value = "";
     renderSearchHistory(cityInput);
     displayWeather(cityInput);
-};
-
+  };
+  
+  searchButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    handleNewSearch();
+  });
 const renderSearchHistory = (userSearch) => {
     const listItem = document.createElement("li");
     const button = document.createElement("button");
@@ -184,5 +188,6 @@ const displayWeather = (userSearch) => {
  })};
  searchButton.addEventListener("click",function(event){
 event.preventDefault()
+handleNewSearch();
 displayWeather(cityName.value)
  })
