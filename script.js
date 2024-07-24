@@ -2,11 +2,10 @@ let userSearches = [];
 let searchButton = document.querySelector("#search");
 let recentSearchesList = document.querySelector("#recent-searches-list");
 let noSearchesMessage = document.querySelector("#no-searches-message");
-
+let cityName = document.getElementById("city")
 window.onload = function() {
     renderPastSearches();
 }
-
 renderPastSearches = function() {
     let savedSearches = JSON.parse(localStorage.getItem("userSearches"));
     if (savedSearches) {
@@ -48,13 +47,27 @@ const renderSearchHistory = (userSearch) => {
     recentSearchesList.prepend(listItem);
     noSearchesMessage.style.display = "none";
 };
-
+function giolocation(city){
+    const OpenWeatherAPIKey = "17a651c729295f5f4a8c171d3a2de4ea";
+    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${OpenWeatherAPIKey}`
+    fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(data)
+        console.log(data[0])
+        console.log(data[0].lat, data[0].lon)
+        let lat = data[0].lat
+        let lon = data[0].lon
+        return {lat,lon}
+    })
+}
 const displayWeather = (userSearch) => {
+     giolocation(userSearch)
     const OpenWeatherAPIKey = "17a651c729295f5f4a8c171d3a2de4ea";
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${userSearch}&appid=${OpenWeatherAPIKey}&units=imperial`;
-
+    
     fetch(url)
-        .then((response) => response.json())
+            .then((response) => response.json())
         .then((data) => {
             // current forecast
             const currentConditions = document.querySelector("#current-conditions");
@@ -169,3 +182,7 @@ const displayWeather = (userSearch) => {
             day5Humidity.innerHTML = "Humidity: " + data.list[39].main.humidity + "%";
             day5Conditions.appendChild(day5Humidity);
  })};
+ searchButton.addEventListener("click",function(event){
+event.preventDefault()
+displayWeather(cityName.value)
+ })
