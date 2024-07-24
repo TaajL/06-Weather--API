@@ -1,117 +1,158 @@
 /* Global Styles */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    background-color: #f9f9f9;
-  }
-  
-  main {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Header Styles */
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  header h1 {
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  /* Search Form Styles */
-  
-  #search-form {
-    margin: 20px;
-  }
-  
-  #search-form label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  #search-form input[type="search"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-  }
-  
-  #search-form button[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #search-form button[type="submit"]:hover {
-    background-color: #3e8e41;
-  }
-  
-  /* Recent Searches Styles */
-  
-  #recent-searches {
-    margin: 20px;
-  }
-  
-  #recent-searches h2 {
-    margin-top: 0;
-  }
-  
-  #recent-searches-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  #recent-searches-list li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  #recent-searches-list li:last-child {
-    border-bottom: none;
-  }
-  
-  #no-searches-message {
-    color: #999;
-    margin: 20px;
-  }
-  
-  /* Weather Dashboard Styles */
-  
-  #weather-dashboard {
-    margin: 20px;
-  }
-  
-  #current-conditions {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-  }
-  
-  #future-forecast {
-    margin-top: 20px;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+
+header {
+  background-color: #2196F3; /* blue */
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Search Form Styles */
+
+#search-form {
+  margin: 20px;
+}
+
+#search-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#search-form input[type="search"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+#search-form button[type="submit"] {
+  background-color: #4CAF50; /* green */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#search-form button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Recent Searches Styles */
+
+#recent-searches {
+  margin: 20px;
+}
+
+#recent-searches h2 {
+  margin-top: 0;
+}
+
+#recent-searches-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#recent-searches-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#recent-searches-list li:last-child {
+  border-bottom: none;
+}
+
+#no-searches-message {
+  color: #999;
+  margin: 20px;
+}
+
+/* Weather Dashboard Styles */
+
+#weather-dashboard {
+  margin: 20px;
+}
+
+#current-conditions {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+#future-forecast {
+  margin-top: 20px;
+}
+
+#future-forecast ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#future-forecast li {
+  width: 20%;
+  margin: 10px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+#future-forecast li:nth-child(1) {
+  background-color: #FFC107; /* orange */
+}
+
+#future-forecast li:nth-child(2) {
+  background-color: #8BC34A; /* green */
+}
+
+#future-forecast li:nth-child(3) {
+  background-color: #9C27B0; /* purple */
+}
+
+#future-forecast li:nth-child(4) {
+  background-color: #03A9F4; /* blue */
+}
+
+#future-forecast li:nth-child(5) {
+  background-color: #FF9800; /* orange */
+}
+
+#future-forecast li:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
