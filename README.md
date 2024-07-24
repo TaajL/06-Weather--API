@@ -5,7 +5,7 @@ I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
 
 ## Deployed Application 
-[Github Repo link](https://github.com/TaajL/06-Weather--API)
+[Deployed Application Link](https://taajl.github.io/06-Weather--API/)
 
 
  ![screenshot](./assets/css/Weather%20API.png)
