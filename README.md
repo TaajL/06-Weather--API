@@ -8,7 +8,7 @@ SO THAT I can plan a trip accordingly
 [Github Repo link](https://github.com/TaajL/06-Weather--API)
 
 
- ![screenshot](/JATE.png)
+ ![screenshot](./assets/css/Weather%20API.png)
 
 ## Installation 
 DAY JS
